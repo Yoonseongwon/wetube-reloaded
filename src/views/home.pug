@@ -1,0 +1,8 @@
+extends base.pug
+block content  
+    h1 Welcome here will see the trending video.
+    ul
+        each video in videos 
+            li=video
+        else
+            li Sorry Nothing found.
