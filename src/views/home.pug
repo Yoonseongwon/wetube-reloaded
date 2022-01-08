@@ -1,8 +1,10 @@
 extends base.pug
+include mixins/video
 block content  
     h1 Welcome here will see the trending video.
-    ul
-        each video in videos 
-            li=video
-        else
-            li Sorry Nothing found.
+
+    each video in videos 
+        +video(video)
+                
+    else
+        li Sorry Nothing found.
